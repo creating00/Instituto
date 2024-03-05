@@ -42,7 +42,7 @@ $totalSe = mysqli_num_rows($sedes);
 </head>
 </header>
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray">Panel de Administración</h1>
+        <h1 class="h3 mb-0 text-gray">Panel Principal</h1>
     </div>
 
     <!-- Content Row -->

@@ -22,7 +22,7 @@ if (empty($_SESSION['active'])) {
 
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Sistema Institutos o Colegios</a>
+        <a class="navbar-brand" href="index.php">Sistema Institutos</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
 
         <!-- Navbar-->
@@ -53,17 +53,29 @@ if (empty($_SESSION['active'])) {
                         </a>
 
                         <a class="nav-link" href="usuarios.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-user" style="color:#FFFFFF;"></i></div>
+                            <div class="sb-nav-link-icon"><i class="bi bi-emoji-smile-fill"></i></div>
                             Usuarios
                         </a>
-                        <a class="nav-link" href="estadisticas.php">
+                        <a class="nav-link" href="alumno.php">
+                            <div class="sb-nav-link-icon"><i class="bi bi-emoji-smile-fill"></i></div>
+                            Alumnos
+                        </a>
+                        <a class="nav-link" href="curso.php">
+                            <div class="sb-nav-link-icon"><i class="bi bi-book-half" style="color:#FFFFFF"></i></div>                           
+                            Cursos
+                        </a>
+                        <a class="nav-link" href="profesor.php">
+                            <div class="sb-nav-link-icon"><i class="bi bi-emoji-smile-fill"></i></div>
+                            Docentes
+                        </a>
+                       <!-- <a class="nav-link" href="estadisticas.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true" style="color:#FFFFFF;"></i></div>
                             Estadisticas
                         </a>
                         <a class="nav-link" href="gastos.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-minus" aria-hidden="true" style="color:#FFFFFF;"></i></div>
                             Control de Gastos
-                        </a>
+                        </a>-->
                         
                         <a class="nav-link" href="config.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-cogs" style="color:#FFFFFF;"></i></div>

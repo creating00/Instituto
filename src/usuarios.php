@@ -53,11 +53,13 @@ if (!empty($_POST)) {
     }
 }
 ?>
-<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#nuevo_usuario"><i class="fas fa-plus"></i></button>
-<a class="nav-link" href="gestionCobros.php">
+<div class="container-fluid">
+<button class="btn btn-primary btn-sm float-right" type="button" data-toggle="modal" data-target="#nuevo_usuario">Nuevo Usuario <i class="fas fa-plus"></i></button>
+</div>
+<!--<a class="nav-link" href="gestionCobros.php">
 <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true"></i> Gestion Cobranzas Usuarios</div>
+</a>-->
 
-</a>
 <div id="nuevo_usuario" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -132,7 +134,7 @@ if (!empty($_POST)) {
         </div>
     </div>
 </div>
-<div class="table-responsive">
+<div class="table-table-table-table-responsive-lg">
     <table class="table table-hover table-striped table-bordered mt-2" id="tbl">
         <thead class="thead-dark">
             <tr>

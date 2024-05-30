@@ -1,7 +1,7 @@
 <?php include_once "includes/header.php";
 require "../conexion.php";
 $usuarios = mysqli_query($conexion, "SELECT * FROM usuario");
-$totalU= mysqli_num_rows($usuarios);
+/*$totalU= mysqli_num_rows($usuarios);
 $alumno = mysqli_query($conexion, "SELECT * FROM alumno");
 $totalA = mysqli_num_rows($alumno);
 $curso = mysqli_query($conexion, "SELECT * FROM curso");
@@ -13,7 +13,7 @@ $totalP = mysqli_num_rows($profesor);
 $sala = mysqli_query($conexion, "SELECT * FROM sala");
 $totalSa = mysqli_num_rows($sala);
 $sedes = mysqli_query($conexion, "SELECT * FROM sedes");
-$totalSe = mysqli_num_rows($sedes);
+$totalSe = mysqli_num_rows($sedes);*/
 
 ?>
 <header>

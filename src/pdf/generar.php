@@ -36,7 +36,7 @@ $pdf->Ln();
 $pdf->Cell(3, 5, utf8_decode("$feha_actual"), 0, 0, 'L');
 $pdf->SetFont('Arial', 'B', 15);
 $pdf->Cell(180, 6, utf8_decode($datos['nombre']), 0, 1, 'C');
-$pdf->Image("../../assets/img/logo.jpeg", 150, 10, 35, 35, 'JPEG');
+$pdf->Image("../../assets/img/logo.png", 150, 10, 35, 35, 'PNG');
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(20, 5, utf8_decode("Teléfono: "), 0, 0, 'L');

@@ -57,7 +57,7 @@ if (!empty($_SESSION['active'])) {
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header text-center">
                                     <img class="img-thumbnail" src="assets/img/logo.png" width="100">
-                                    <h3 class="font-weight-light my-4">Iniciar Sesión Bienveido</h3>
+                                    <h3 class="font-weight-light my-4">Iniciar Sesion</h3>
                                 </div>
                                 <div class="card-body">
                                     <form action="" method="POST">

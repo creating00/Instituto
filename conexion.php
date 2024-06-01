@@ -1,9 +1,9 @@
 <?php
     $host = "localhost";
-    $user = "root";
-    $clave = "";
-    //$bd = "u366687730_ediser2";
-    $bd = "instituto";
+    $user = "u383024755_creatingsr";
+    $clave = "600269Jon&2505";
+    $bd = "u383024755_instituto";
+    //$bd = "instituto";
     $conexion = mysqli_connect($host,$user,$clave,$bd);
     if (mysqli_connect_errno()){
         echo "No se pudo conectar a la base de datos";

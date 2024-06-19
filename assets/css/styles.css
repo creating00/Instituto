@@ -6080,7 +6080,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #bd2130 !important;
+  background-color: #fc0a21 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6130,7 +6130,7 @@ button.bg-warning:focus {
 }
 
 .bg-danger {
-  background-color: #dc3545 !important;
+  background-color: #fc0a21 !important;
 }
 
 a.bg-danger:hover, a.bg-danger:focus,

@@ -522,7 +522,7 @@ function buscar_datos_profesor()
     {
       data:  parametros,
       dataType: 'json',
-      url:   'datosInscripcion.php',
+      url:   'datosInscripcion.php.php',
       type:  'POST',
      
       error: function()
@@ -611,6 +611,7 @@ function guardar()
         $('.resultados').html(mensaje);
         url = 'pdf/reporte.php?dni=' + dni + '&curso=' + curso + '&sede=' + sede;
         window.open(url, '_blank')
+        window.location.href = "inscripcion.php";
         //enviar_correo();
         limpiar();
          

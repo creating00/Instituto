@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2024 a las 02:11:23
+-- Tiempo de generación: 19-06-2024 a las 21:17:38
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -46,7 +46,8 @@ CREATE TABLE `alumno` (
 
 INSERT INTO `alumno` (`idalumno`, `dni`, `nombre`, `apellido`, `direccion`, `celular`, `email`, `tutor`, `contacto`, `idsede`, `estado`) VALUES
 (3, 12345678, 'JONATHAN', 'GONZALEZ', 'la merced', '32644165', 'joni8del11@gmail.com', 'mabel', '38413131', 6, 1),
-(4, 78945612, 'PEPE', 'ALVARADO', 'las colinas', '388845121', 'pepe@gmail.com', 'pedro', '38887451', 6, 1);
+(4, 78945612, 'PEPE', 'ALVARADO', 'las colinas', '388845121', 'pepe@gmail.com', 'pedro', '38887451', 6, 1),
+(5, 44445698, 'TOMAS', 'LOPEZ', 'la merced', '4546111', 'tomas@gmail.com', 'jorge', '161314646', 6, 1);
 
 -- --------------------------------------------------------
 
@@ -67,7 +68,7 @@ CREATE TABLE `configuracion` (
 --
 
 INSERT INTO `configuracion` (`id`, `nombre`, `telefono`, `email`, `direccion`) VALUES
-(1, 'Creating', '3888604355', 'creatingint@gmail.com', 'san pedro de jujuy');
+(1, 'CAMBRIDGE', '3888604355', 'creatingint@gmail.com', 'san pedro de jujuy');
 
 -- --------------------------------------------------------
 
@@ -111,7 +112,30 @@ INSERT INTO `cuotas` (`idcuotas`, `idinscripcion`, `fecha`, `cuota`, `mes`, `añ
 (13, 3, '0000-00-00', 2, 'Junio', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0),
 (14, 3, '0000-00-00', 3, 'Julio', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0),
 (15, 3, '0000-00-00', 4, 'Agosto', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0),
-(16, 3, '0000-00-00', 5, 'Septiembre', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0);
+(16, 3, '0000-00-00', 5, 'Septiembre', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0),
+(17, 4, '0000-00-00', 1, 'Junio', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(18, 4, '0000-00-00', 2, 'Julio', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(19, 4, '0000-00-00', 3, 'Agosto', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(20, 4, '0000-00-00', 4, 'Septiembre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(21, 4, '0000-00-00', 5, 'Octubre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(22, 4, '0000-00-00', 6, 'Noviembre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(23, 4, '0000-00-00', 1, 'Junio', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(24, 4, '0000-00-00', 2, 'Julio', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(25, 4, '0000-00-00', 3, 'Agosto', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(26, 4, '0000-00-00', 4, 'Septiembre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(27, 4, '0000-00-00', 5, 'Octubre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(28, 4, '0000-00-00', 6, 'Noviembre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(29, 5, '0000-00-00', 1, 'Junio', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(30, 5, '0000-00-00', 2, 'Julio', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(31, 5, '0000-00-00', 3, 'Agosto', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(32, 5, '0000-00-00', 4, 'Septiembre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(33, 5, '0000-00-00', 5, 'Octubre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(34, 5, '0000-00-00', 6, 'Noviembre', 2024, 2500, 0, 0, 'IMPAGA', '', 1, 0),
+(40, 7, '0000-00-00', 1, 'Junio', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0),
+(41, 7, '0000-00-00', 2, 'Julio', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0),
+(42, 7, '0000-00-00', 3, 'Agosto', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0),
+(43, 7, '0000-00-00', 4, 'Septiembre', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0),
+(44, 7, '0000-00-00', 5, 'Octubre', 2024, 8000, 0, 0, 'IMPAGA', '', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -227,7 +251,10 @@ CREATE TABLE `inscripcion` (
 INSERT INTO `inscripcion` (`idinscripcion`, `idusuario`, `idalumno`, `idcurso`, `idsala`, `idprofesor`, `fecha`, `fechacomienzo`, `importe`, `mediodepago`, `idsede`, `estado`, `mes`, `año`) VALUES
 (1, 1, 3, 8, 11, 3, '2024-05-29 23:31:20', '2024-05-29', 25000, 'efectivo', 6, 0, 'Mayo', 2024),
 (2, 1, 4, 6, 11, 3, '2024-05-29 23:46:40', '2024-05-29', 35000, 'efectivo', 6, 0, 'Mayo', 2024),
-(3, 1, 4, 8, 11, 3, '2024-05-30 00:02:53', '2024-05-29', 40000, 'efectivo', 6, 0, 'Mayo', 2024);
+(3, 1, 4, 8, 11, 3, '2024-05-30 00:02:53', '2024-05-29', 40000, 'efectivo', 6, 0, 'Mayo', 2024),
+(4, 1, 3, 6, 11, 3, '2024-06-19 19:04:57', '2024-06-19', 4500, 'efectivo', 6, 0, 'Junio', 2024),
+(5, 1, 5, 6, 11, 3, '2024-06-19 19:08:17', '2024-06-19', 8500, 'efectivo', 6, 0, 'Junio', 2024),
+(7, 1, 5, 8, 11, 3, '2024-06-19 19:10:17', '2024-06-19', 6844, 'efectivo', 6, 0, 'Junio', 2024);
 
 -- --------------------------------------------------------
 
@@ -451,7 +478,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `alumno`
 --
 ALTER TABLE `alumno`
-  MODIFY `idalumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idalumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `configuracion`
 --
@@ -461,7 +488,7 @@ ALTER TABLE `configuracion`
 -- AUTO_INCREMENT de la tabla `cuotas`
 --
 ALTER TABLE `cuotas`
-  MODIFY `idcuotas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idcuotas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT de la tabla `curso`
 --
@@ -481,7 +508,7 @@ ALTER TABLE `examen`
 -- AUTO_INCREMENT de la tabla `inscripcion`
 --
 ALTER TABLE `inscripcion`
-  MODIFY `idinscripcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idinscripcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --

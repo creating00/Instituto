@@ -53,7 +53,7 @@ $totalSe = mysqli_num_rows($sedes);*/
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-white text-uppercase mb-1" >Usuarios</div>
-                            <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalU;?></div>
+                           <!-- <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalU;?></div>-->
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-user fa-2x text-gray-300 fa-5x" style="color:#FFFFFF;"></i>
@@ -65,12 +65,12 @@ $totalSe = mysqli_num_rows($sedes);*/
 
         <!-- Earnings (Monthly) Card Example -->
         <a class="col-xl-3 col-md-6 mb-4" href="alumno.php">
-            <div class="card border-left-success shadow h-100 py-2 bg-success">
+            <div class="card border-left-success shadow h-100 py-2 bg-primary">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Alumnos</div>
-                            <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalA; ?></div>
+                            <!--<div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalA; ?></div>-->
                         </div>
                         <div class="col-auto">
                         <i class="fa fa-graduation-cap fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>
@@ -89,7 +89,7 @@ $totalSe = mysqli_num_rows($sedes);*/
                             <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Cursos</div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <div class="h5 mb-0 mr-3 font-weight-bold text-white"><?php echo $totalC; ?></div>
+                                   <!-- <div class="h5 mb-0 mr-3 font-weight-bold text-white"><?php echo $totalC; ?></div>-->
                                 </div>
                                 <!--<div class="col">
                                     <div class="progress progress-sm mr-2">
@@ -113,7 +113,7 @@ $totalSe = mysqli_num_rows($sedes);*/
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Profesores</div>
-                            <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalP; ?></div>
+                           <!-- <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalP; ?></div>-->
                         </div>
                         <div class="col-auto">
                         <i class="fa fa-users fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>
@@ -128,7 +128,7 @@ $totalSe = mysqli_num_rows($sedes);*/
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Salas</div>
-                            <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalSa; ?></div>
+                           <!-- <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalSa; ?></div>-->
                         </div>
                         <div class="col-auto">
                         <i class="fa fa-window-restore fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>
@@ -137,7 +137,7 @@ $totalSe = mysqli_num_rows($sedes);*/
                 </div>
             </div>
         </a>
-        <a class="col-xl-3 col-md-6 mb-4" href="ganancias.php">
+        <!--<a class="col-xl-3 col-md-6 mb-4" href="ganancias.php">
             <div class="card border-left-info shadow h-100 py-2 bg-primary">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -152,14 +152,14 @@ $totalSe = mysqli_num_rows($sedes);*/
                     </div>
                 </div>
             </div>
-        </a>
+        </a>-->
         <a class="col-xl-3 col-md-6 mb-4" href="sedes.php">
-            <div class="card border-left-primary shadow h-100 py-2 bg-warning">
+            <div class="card border-left-primary shadow h-100 py-2 bg-primary">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-white text-uppercase mb-1" >Sedes</div>
-                            <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalSe; ?></div>
+                           <!-- <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalSe; ?></div>-->
                         </div>
                         <div class="col-auto">
                         <i class="fa fa-university fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>

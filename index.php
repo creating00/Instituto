@@ -74,7 +74,7 @@ if (!empty($_SESSION['active'])) {
                                         </div>
                                         <?php echo isset($alert) ? $alert : ''; ?>
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <button class="btn btn-primary" type="submit">Login</button>
+                                            <button class="btn btn-danger" type="submit">Login</button>
                                         </div>
                                     </form>
                                 </div>

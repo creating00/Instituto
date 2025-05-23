@@ -74,7 +74,7 @@ if (empty($_SESSION['active'])) {
 
                 <!-- Imagen (logo u otro) al final -->
                 <div class="sidebar-footer">
-                <img src="../../assets/img//logo.png" alt="Logo" style="width: 221px; height: auto; border-radius: 8px;">
+                <img src="../../assets/img//logo.png" alt="Logo" style="width: 223px; height: auto; border-radius: 8px;">
                 </div>
             </div>
         </nav>

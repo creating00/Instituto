@@ -126,20 +126,16 @@ $rolesHandler->inicializarRoles();
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray">Panel Principal</h1>
 </div>
-
-<!-- Content Row -->
-<div class="row">
 <div class="row justify-content-center">
     <?php
     $items = [
-        ["link" => "usuarios.php", "color" => "#dc3545", "icon" => "fa-user", "label" => "Usuarios", "value" => $totalU],
-        ["link" => "alumno.php", "color" => "#198754", "icon" => "fa-graduation-cap", "label" => "Estudiantes", "value" => $totalA],
-        ["link" => "curso.php", "color" => "#0d6efd", "icon" => "fa-tasks", "label" => "Cursos", "value" => $totalC],
-        ["link" => "profesor.php", "color" => "#dc3545", "icon" => "fa-users", "label" => "Profesores", "value" => $totalP],
-        ["link" => "sala.php", "color" => "#0d6efd", "icon" => "fa-window-restore", "label" => "Salas", "value" => $totalSa],
-        ["link" => "ganancias.php", "color" => "#0d6efd", "icon" => "fa-dollar-sign", "label" => "Ganancias", "value" => "$ $ $ $ $"],
-        ["link" => "uniformes.php", "color" => "#1E3A8A", "icon" => "fa-tshirt", "label" => "Uniformes", "value" => ""],
-        // Puedes agregar más ítems si deseas
+        ["link" => "usuarios.php", "color" => "#f94144", "icon" => "fa-user", "label" => "Usuarios", "value" => $totalU],
+        ["link" => "alumno.php", "color" => "#f3722c", "icon" => "fa-graduation-cap", "label" => "Estudiantes", "value" => $totalA],
+        ["link" => "curso.php", "color" => "#f9c74f", "icon" => "fa-tasks", "label" => "Cursos", "value" => $totalC],
+        ["link" => "profesor.php", "color" => "#90be6d", "icon" => "fa-users", "label" => "Profesores", "value" => $totalP],
+        ["link" => "sala.php", "color" => "#43aa8b", "icon" => "fa-window-restore", "label" => "Salas", "value" => $totalSa],
+        ["link" => "ganancias.php", "color" => "#577590", "icon" => "fa-dollar-sign", "label" => "Ganancias", "value" => "$ $ $ $ $"],
+        ["link" => "uniformes.php", "color" => "#277da1", "icon" => "fa-tshirt", "label" => "Uniformes", "value" => ""],
     ];
 
     foreach ($items as $item): ?>
@@ -165,7 +161,6 @@ $rolesHandler->inicializarRoles();
     <?php endforeach; ?>
 </div>
 
-</div>
 <script>
     DameLaFechaHora();
 </script><?php echo date("Y"); ?>

@@ -56,8 +56,8 @@ if (!empty($_SESSION['active'])) {
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header text-center">
-                                    <img class="img-thumbnail" src="assets/img/academia1.png" width="100">
-                                    <h3 class="font-weight-light my-4">Iniciar Sesión Academia</h3>
+                                    <img class="img-thumbnail" src="assets/img/1.png" width="100">
+                                    <h3 class="font-weight-light my-4">Iniciar Sesión</h3>
                                 </div>
                                 <div class="card-body">
                                     <form action="" method="POST">

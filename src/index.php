@@ -128,22 +128,29 @@ $rolesHandler->inicializarRoles();
 </div>
 
 <!-- Content Row -->
-<div class="row">
-    <a class="col-xl-3 col-md-6 mb-4" href="usuarios.php">
-        <div class="card border-left-warning bg-danger shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Usuarios</div>
-                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalU; ?></div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-user fa-2x text-gray-300 fa-5x" style="color:#FFFFFF;"></i>
-                    </div>
-                </div>
-            </div>
+<div class="row justify-content-center">
+    <a class="col-xl-3 col-md-6 mb-4 text-decoration-none" href="usuarios.php">
+        <div class="d-flex align-items-center justify-content-center"
+             style="
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-color: #dc3545;
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                color: white;
+                text-align: center;
+                flex-direction: column;
+                transition: transform 0.2s;
+        "
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'">
+            <i class="fas fa-user fa-3x mb-2"></i>
+            <div class="text-uppercase font-weight-bold">Usuarios</div>
+            <div class="h4 font-weight-bold"><?php echo $totalU; ?></div>
         </div>
     </a>
+</div>
+
 
     <!-- Earnings (Monthly) Card Example -->
     <a class="col-xl-3 col-md-6 mb-4" href="alumno.php">

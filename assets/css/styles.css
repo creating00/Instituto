@@ -3956,7 +3956,7 @@ input[type=button].btn-block {
 }
 
 .navbar {
-  background-color: #00cfff !important; /* Celeste vibrante */
+  background-color: #12282d !important; /* Celeste vibrante */
   position: relative;
   display: flex;
   flex-wrap: wrap;

@@ -73,8 +73,8 @@ if ($result_sql == 0) {
 
                         <input type="hidden" name="id" value="<?php echo $idprofesor; ?>">
                         <div class="form-group">
-                         <label for="cantidad">DNI</label>
-                         <input type="number" placeholder="Ingrese DNI" class="form-control" name="dni" id="dni" class="form-control" value="<?php echo $data['dni']; ?>">
+                         <label for="cantidad">CÉDULA</label>
+                         <input type="number" placeholder="Ingrese CÉDULA" class="form-control" name="dni" id="dni" class="form-control" value="<?php echo $data['dni']; ?>">
                      </div>
                      <div class="form-group">
                         <label for="nombre">Nombre</label>
@@ -90,13 +90,13 @@ if ($result_sql == 0) {
                     </div>
                     <div class="form-group">
                          <label for="celular">Celular</label>
-                         <input type="number" placeholder="Ingrese cantidad" class="form-control" name="celular" id="celular" class="form-control" value="<?php echo $data['celular']; ?>">
+                         <input type="number" placeholder="Ingrese cantidad" class="form-control celular-input" name="celular" id="celular" class="form-control" value="<?php echo $data['celular']; ?>">
                      </div>
                      <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" placeholder="Ingrese Correo Electrónico" name="email" id="email" class="form-control" value="<?php echo $data['email']; ?>">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" hidden>
                      <label for="sede">Sede</label>
                     <select name="sede" class="form-control">
                     <?php
@@ -128,8 +128,25 @@ if ($result_sql == 0) {
             </div>
         </div>
     </div>
-
-
 </div>
+
+<script>
+    function validarCelular(input) {
+        // Asegura que solo se ingresen números
+        input.value = input.value.replace(/[^0-9]/g, '');
+
+        // Limita la entrada a 10 dígitos
+        if (input.value.length > 10) {
+            input.value = input.value.slice(0, 10);
+        }
+    }
+
+    // Aplicar la validación a todos los inputs con la clase "celular-input"
+    document.querySelectorAll('.celular-input').forEach(function(input) {
+        input.addEventListener('input', function() {
+            validarCelular(this);
+        });
+    });
+</script>
 <!-- /.container-fluid -->
 <?php include_once "includes/footer.php"; ?>

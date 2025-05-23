@@ -1,7 +1,7 @@
 <?php include_once "includes/header.php";
 include "../conexion.php";
 $id_user = $_SESSION['idUser'];
-$permiso = "sedes";
+$permiso = "sedes";// editar esto por uniformes
 $sql = mysqli_query($conexion, "SELECT p.*, d.* FROM permisos p INNER JOIN detalle_permisos d ON p.id = d.id_permiso WHERE d.id_usuario = $id_user AND p.nombre = '$permiso'");
 $existe = mysqli_fetch_all($sql);
 if (empty($existe) && $id_user != 1) {
@@ -71,7 +71,7 @@ if ($result_sql == 0) {
 
                         <input type="hidden" name="id" value="<?php echo $idsede; ?>">
                         
-                     <div class="form-group">
+                     <div class="form-group" hidden>
                         <label for="sede">Sede</label>
                         <input type="text" class="form-control" placeholder="Ingrese Nombre" name="nombre" id="nombre" class="form-control" value="<?php echo $data['nombre']; ?>">
                     </div>

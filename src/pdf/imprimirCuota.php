@@ -6,7 +6,7 @@ $pdf->AddPage();
 $pdf->SetMargins(10, 10, 10);
 $pdf->SetTitle("Comprobante de Pago");
 $pdf->SetFont('Arial', 'B', 12);
-$pdf->Image("../../assets/img/agua.jpg", 30, 30, 170, 'JPG');
+$pdf->Image("../../assets/img/agua.jpg", 30, 30, 170, 0, 'JPG');
 
 $config = mysqli_query($conexion, "SELECT * FROM configuracion");
 $datos = mysqli_fetch_assoc($config);
@@ -33,7 +33,7 @@ $pdf->Ln();
 $pdf->Cell(3, 5, utf8_decode("$feha_actual"), 0, 0, 'L');
 $pdf->SetFont('Arial', 'B', 15);
 $pdf->Cell(180, 6, utf8_decode($datos['nombre']), 0, 1, 'C');
-$pdf->Image("../../assets/img/logo.png", 150, 10, 35, 35, 'PNG');
+$pdf->Image("../../assets/img/academia1.png", 150, 10, 35, 35, 'PNG');
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(20, 5, utf8_decode("Teléfono: "), 0, 0, 'L');
@@ -58,10 +58,10 @@ $pdf->Cell(196, 5, "Datos del Alumno", 1, 1, 'C', 1);
 $pdf->Ln(3);
 $pdf->SetTextColor(0, 0, 0);
 //$pdf->Cell(14, 5, utf8_decode('N°'), 0, 0, 'L');
-$pdf->Cell(47, 5, utf8_decode('dni'), 0, 0, 'L');
+$pdf->Cell(47, 5, utf8_decode('Cedula'), 0, 0, 'L');
 $pdf->Cell(40, 5, 'Nombre', 0, 0, 'L');
 $pdf->Cell(40, 5, 'Apellido', 0, 0, 'L');
-$pdf->Cell(56, 5, 'Sede', 0, 1, 'L');
+//$pdf->Cell(56, 5, 'Sede', 0, 1, 'L');
 $pdf->Ln(1);
 $pdf->SetFont('Arial', '', 11);
 $contador = 1;
@@ -70,7 +70,7 @@ while ($row = mysqli_fetch_assoc($factura)) {
     $pdf->Cell(47, 5, $row['dni'], 0, 0, 'L');
     $pdf->Cell(40, 5, $row['nombre'], 0, 0, 'L');
     $pdf->Cell(40, 5, $row['apellido'], 0, 0, 'L');
-    $pdf->Cell(56, 5, $row['sede'], 0, 1, 'L');
+    //$pdf->Cell(56, 5, $row['sede'], 0, 1, 'L');
     //$contador++;
 
 }
@@ -90,7 +90,7 @@ $pdf->Ln(3);
 $pdf->SetFont('Arial', '', 11);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->Cell(53, 5, 'Curso', 0, 0, 'L');
-$pdf->Cell(30, 5, 'Cuota', 0, 0, 'L');
+$pdf->Cell(30, 5, 'Pago', 0, 0, 'L');
 $pdf->Cell(30, 5, 'Concepto', 0, 0, 'L');
 $pdf->Cell(20, 5, '', 0, 1, 'L');
 $pdf->Ln(1);
@@ -114,8 +114,8 @@ INNER JOIN sedes on inscripcion.idsede=sedes.idsede
 WHERE idcuotas='$idcuota'");
 $pdf->SetTextColor(0, 0, 0);
 $pdf->Cell(53, 5, 'Fecha y Hora de Pago', 0, 0, 'L');
-$pdf->Cell(30, 5, 'Importe', 0, 0, 'L');
-$pdf->Cell(30, 5, 'Interes', 0, 0, 'L');
+$pdf->Cell(30, 5, 'Monto', 0, 0, 'L');
+$pdf->Cell(30, 5, 'Mora', 0, 0, 'L');
 $pdf->Cell(30, 5, 'Total', 0, 0, 'L');
 $pdf->Cell(28, 5, 'Operador', 0, 0, 'L');
 $pdf->Cell(45, 5, 'Medio de Pago', 0, 1, 'L');
@@ -125,7 +125,7 @@ $pdf->SetFont('Arial', '', 11);
 
 while ($row1 = mysqli_fetch_assoc($factura)) {
     $pdf->Cell(53, 5, $row1['fecha'], 0, 0, 'L');
-    $pdf->Cell(30, 5, $row1['importe'], 0, 0, 'L');
+    $pdf->Cell(30, 5,"$". $row1['importe'], 0, 0, 'L');
     $pdf->Cell(30, 5, $row1['interes'], 0, 0, 'L');
     $pdf->Cell(30, 5, $row1['total'], 0, 0, 'L');
     $pdf->Cell(28, 5, $row1['usuario'], 0, 0, 'L');

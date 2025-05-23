@@ -44,7 +44,7 @@ if (empty($_SESSION['active'])) {
                     <div class="nav">
                         <a class="nav-link" href="cuotas.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-credit-card" aria-hidden="true" style="color:#FFFFFF;"></i></div>
-                            Cobrar Cuota
+                            Cobrar Pago
                         </a>
                         <a class="nav-link" href="inscripcion.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-address-card" aria-hidden="true" style="color:#FFFFFF;"></i></div>

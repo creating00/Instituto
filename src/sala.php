@@ -120,7 +120,7 @@ if (empty($existe) && $id_user != 1) {
                         <input type="text" class="form-control" placeholder="Ingrese Descripcion" name="descripcion" id="descripcion">
                     </div>
                     
-                     <input type="submit" value="Guardar Sede" class="btn btn-primary">
+                     <input type="submit" value="Guardar Sala" class="btn btn-primary">
                  </form>
              </div>
          </div>

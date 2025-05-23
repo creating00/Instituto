@@ -21,16 +21,16 @@ if (empty($_SESSION['active'])) {
 </head>
 
 <body class="sb-nav-fixed">
-<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Sistema Institutos</a>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.php">Gestion Academia</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
 
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#nuevo_pass"><i class="fa fa-user" aria-hidden="true"></i>Usuario: <?php echo $_SESSION['user']; ?></a>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#nuevo_pass"><i class="fa fa-user" aria-hidden="true"></i>Usuario: <?php echo $_SESSION['user']; ?></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="salir.php">Cerrar Sesión</a>
                 </div>
@@ -42,41 +42,33 @@ if (empty($_SESSION['active'])) {
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                    <a class="nav-link" href="cuotas.php">
+                        <a class="nav-link" href="cuotas.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-credit-card" aria-hidden="true" style="color:#FFFFFF;"></i></div>
-                            Cobrar Cuota
+                            Cobrar Pago
                         </a>
-                        
+
                         <a class="nav-link" href="inscripcion.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-address-card" aria-hidden="true" style="color:#FFFFFF;"></i></div>
                             Inscribir
                         </a>
 
                         <a class="nav-link" href="usuarios.php">
-                            <div class="sb-nav-link-icon"><i class="bi bi-emoji-smile-fill"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-user" style="color:#FFFFFF;"></i></div>
                             Usuarios
                         </a>
-                        <a class="nav-link" href="alumno.php">
-                            <div class="sb-nav-link-icon"><i class="bi bi-emoji-smile-fill"></i></div>
-                            Alumnos
-                        </a>
-                        <a class="nav-link" href="curso.php">
-                            <div class="sb-nav-link-icon"><i class="bi bi-book-half" style="color:#FFFFFF"></i></div>                           
-                            Cursos
-                        </a>
-                        <a class="nav-link" href="profesor.php">
-                            <div class="sb-nav-link-icon"><i class="bi bi-emoji-smile-fill"></i></div>
-                            Docentes
-                        </a>
-                       <!-- <a class="nav-link" href="estadisticas.php">
+                        <a class="nav-link" href="estadisticas.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true" style="color:#FFFFFF;"></i></div>
-                            Estadisticas
+                            Gestion de Estudiantes
+                        </a>
+                        <a class="nav-link" href="historial_alumno.php">
+                            <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true" style="color:#FFFFFF;"></i></div>
+                            Estudiantes
                         </a>
                         <a class="nav-link" href="gastos.php">
                             <div class="sb-nav-link-icon"><i class="fa fa-minus" aria-hidden="true" style="color:#FFFFFF;"></i></div>
                             Control de Gastos
-                        </a>-->
-                        
+                        </a>
+
                         <a class="nav-link" href="config.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-cogs" style="color:#FFFFFF;"></i></div>
                             Sobre Nosotros
@@ -89,6 +81,3 @@ if (empty($_SESSION['active'])) {
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid mt-2">
-                
-        
-        

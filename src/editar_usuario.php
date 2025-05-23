@@ -17,15 +17,22 @@ if (!empty($_POST)) {
         $correo = $_POST['correo'];
         $usuario = $_POST['usuario'];
         $sede = $_POST['sede'];
-        $rs = mysqli_query($conexion, "SELECT idsede FROM sedes WHERE nombre ='$sede'");
-        while($row = mysqli_fetch_array($rs))
-        {
-            $idsede=$row['idsede'];
-        
-        }
+        $roles = $_POST['roles'];
 
-        $sql_update = mysqli_query($conexion, "UPDATE usuario SET nombre = '$nombre', correo = '$correo' , usuario = '$usuario', idsede='$idsede' WHERE idusuario = $idusuario");
-        $alert = '<div class="alert alert-success" role="alert">Usuario Actualizado</div>';
+        $stmt_sede = $conexion->prepare("SELECT idsede FROM sedes WHERE nombre = ?");
+        $stmt_sede->bind_param("s", $sede);
+        $stmt_sede->execute();
+        $resultado_sede = $stmt_sede->get_result();
+
+        if ($row = $resultado_sede->fetch_assoc()) {
+            $idsede = $row['idsede'];
+
+            $stmt_update = $conexion->prepare("UPDATE usuario SET nombre = ?, correo = ?, usuario = ?, idsede = ?, idrol = ? WHERE idusuario = ?");
+            $stmt_update->bind_param("sssiii", $nombre, $correo, $usuario, $idsede, $roles, $idusuario);
+            $stmt_update->execute();
+
+            $alert = '<div class="alert alert-success" role="alert">Usuario Actualizado</div>';
+        }
     }
 }
 
@@ -45,6 +52,7 @@ if ($result_sql == 0) {
         $nombre = $data['nombre'];
         $correo = $data['correo'];
         $usuario = $data['usuario'];
+        $id_rol = $data['idrol'];
     }
 }
 ?>
@@ -73,31 +81,60 @@ if ($result_sql == 0) {
                         <input type="text" placeholder="Ingrese usuario" class="form-control" name="usuario" id="usuario" value="<?php echo $usuario; ?>">
 
                     </div>
-                    <div class="form-group">
-                     <label for="sede">Sede</label>
-                    <select name="sede" class="form-control">
-                    <?php
-                                                        //traer sedes
-                                                        include "../conexion.php";
-                                                    $query = mysqli_query($conexion, "SELECT nombre FROM sedes");
-                                                    $result = mysqli_num_rows($query);
-                                                    
-                                                    while($row = mysqli_fetch_assoc($query))
-                                                    {
-	                                                //$idrol = $row['idrol'];
-                                                    $prov = $row['nombre'];
+                    <div class="form-group" hidden>
+                        <label for="sede">Sede</label>
+                        <select name="sede" class="form-control">
+                            <?php
+                            //traer sedes
+                            include "../conexion.php";
+                            $query = mysqli_query($conexion, "SELECT nombre FROM sedes");
+                            $result = mysqli_num_rows($query);
 
-													?>
-													
-                                                    <option values="<?php echo $prov; ?>"><?php echo $prov; ?></option>  
+                            while ($row = mysqli_fetch_assoc($query)) {
+                                //$idrol = $row['idrol'];
+                                $prov = $row['nombre'];
 
-                                                    <?php
-                                                     }
-                                                    
-                                                     ?>
-								</select>
+                            ?>
+
+                                <option values="<?php echo $prov; ?>"><?php echo $prov; ?></option>
+
+                            <?php
+                            }
+
+                            ?>
+                        </select>
                     </div>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-user-edit"></i></button>
+
+                    <div class="form-group">
+                        <label for="roles">Rol</label>
+                        <select name="roles" class="form-control" id="roles">
+                            <?php
+                            include "../conexion.php";
+
+                            $query = mysqli_query($conexion, "SELECT idrol, nombrerol FROM roles");
+                            $result = mysqli_num_rows($query);
+
+                            if ($result > 0) {
+                                while ($row = mysqli_fetch_assoc($query)) {
+                                    $idrol = $row['idrol'];
+                                    $nombrerol = strtoupper($row['nombrerol']);
+                                    $selected = ($idrol == $id_rol) ? 'selected' : '';
+                            ?>
+                                    <option value="<?php echo $idrol; ?>" <?php echo $selected; ?>>
+                                        <?php echo $nombrerol; ?>
+                                    </option>
+                                <?php
+                                }
+                            } else {
+                                ?>
+                                <option value="">No hay roles disponibles</option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-user-edit"></i> Modificar</button>
                     <a href="usuarios.php" class="btn btn-danger">Atras</a>
                 </form>
             </div>

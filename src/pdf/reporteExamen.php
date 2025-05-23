@@ -6,7 +6,7 @@ $pdf->AddPage();
 $pdf->SetMargins(10, 10, 10);
 $pdf->SetTitle("Comprobante de Pago Examen final");
 $pdf->SetFont('Arial', 'B', 12);
-$pdf->Image("../../assets/img/agua.jpg", 30, 30, 170, 'JPG');
+$pdf->Image("../../assets/img/agua.jpg", 30, 30, 170, 0, 'JPG');
 
 $config = mysqli_query($conexion, "SELECT * FROM configuracion");
 $datos = mysqli_fetch_assoc($config);
@@ -61,7 +61,7 @@ $pdf->Cell(43, 5, 'dni', 0, 0, 'L');
 $pdf->Cell(38, 5, 'nombre', 0, 0, 'L');
 $pdf->Cell(28, 5, 'apellido', 0, 0, 'L');
 $pdf->Cell(38, 5, 'Cursando', 0, 0, 'L');
-$pdf->Cell(45, 5, 'Sede', 0, 1, 'L');
+//$pdf->Cell(45, 5, 'Sede', 0, 1, 'L');
 $pdf->Ln(1);
 $pdf->SetFont('Arial', '', 11);
 
@@ -70,7 +70,7 @@ while ($row1 = mysqli_fetch_assoc($gastos)) {
     $pdf->Cell(38, 5, $row1['nombre'], 0, 0, 'L');
     $pdf->Cell(26, 5, $row1['apellido'], 0, 0, 'L');
     $pdf->Cell(38, 5, $row1['curso'], 0, 0, 'L');
-    $pdf->Cell(45, 5, $row1['sede'], 0, 1, 'L');
+    //$pdf->Cell(45, 5, $row1['sede'], 0, 1, 'L');
 }
 $pdf->Ln(4);
 $sumar = mysqli_query($conexion, "SELECT alumno.dni, alumno.nombre, alumno.apellido, curso.nombre'curso', examen.sede, examen.fecha, examen.interes, total, usuario.usuario'usuario', examen.mediodepago FROM examen 
@@ -79,7 +79,7 @@ INNER JOIN alumno on inscripcion.idalumno=alumno.idalumno
 INNER JOIN curso on inscripcion.idcurso=curso.idcurso
 INNER JOIN usuario on examen.idusuario=usuario.idusuario WHERE examen.sede='$sede' and examen.idinscripcion='$idinscripcion'");
 $pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(43, 5, 'Interes', 0, 0, 'L');
+$pdf->Cell(43, 5, 'Mora', 0, 0, 'L');
 $pdf->Cell(33, 5, 'Total', 0, 0, 'L');
 $pdf->Cell(50, 5, 'Fecha de Pago', 0, 0, 'L');
 $pdf->Cell(35, 5, 'Operador', 0, 0, 'L');

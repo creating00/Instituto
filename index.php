@@ -56,8 +56,8 @@ if (!empty($_SESSION['active'])) {
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header text-center">
-                                    <img class="img-thumbnail" src="assets/img/logo2.png" width="100">
-                                    <h3 class="font-weight-light my-4">Iniciar Sesion</h3>
+                                    <img class="img-thumbnail" src="assets/img/academia1.png" width="100">
+                                    <h3 class="font-weight-light my-4">Iniciar Sesión Academia</h3>
                                 </div>
                                 <div class="card-body">
                                     <form action="" method="POST">
@@ -74,7 +74,7 @@ if (!empty($_SESSION['active'])) {
                                         </div>
                                         <?php echo isset($alert) ? $alert : ''; ?>
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <button class="btn btn-danger" type="submit">Login</button>
+                                            <button class="btn btn-primary" type="submit">Login</button>
                                         </div>
                                     </form>
                                 </div>

@@ -60,7 +60,7 @@ if (empty($_SESSION['active'])) {
                     </a>
                     <a class="nav-link" href="historial_alumno.php">
                         <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true"></i></div>
-                        Estudiantes
+                        Historial
                     </a>
                     <a class="nav-link" href="gastos.php">
                         <div class="sb-nav-link-icon"><i class="fa fa-minus" aria-hidden="true"></i></div>

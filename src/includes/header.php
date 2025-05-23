@@ -38,46 +38,47 @@ if (empty($_SESSION['active'])) {
         </ul>
     </nav>
     <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <div class="nav">
-                        <a class="nav-link" href="cuotas.php">
-                            <div class="sb-nav-link-icon"><i class="fa fa-credit-card" aria-hidden="true" style="color:#FFFFFF;"></i></div>
-                            Cobrar Pago
-                        </a>
-
-                        <a class="nav-link" href="inscripcion.php">
-                            <div class="sb-nav-link-icon"><i class="fa fa-address-card" aria-hidden="true" style="color:#FFFFFF;"></i></div>
-                            Inscribir
-                        </a>
-
-                        <a class="nav-link" href="usuarios.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-user" style="color:#FFFFFF;"></i></div>
-                            Usuarios
-                        </a>
-                        <a class="nav-link" href="estadisticas.php">
-                            <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true" style="color:#FFFFFF;"></i></div>
-                            Gestion de Estudiantes
-                        </a>
-                        <a class="nav-link" href="historial_alumno.php">
-                            <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true" style="color:#FFFFFF;"></i></div>
-                            Estudiantes
-                        </a>
-                        <a class="nav-link" href="gastos.php">
-                            <div class="sb-nav-link-icon"><i class="fa fa-minus" aria-hidden="true" style="color:#FFFFFF;"></i></div>
-                            Control de Gastos
-                        </a>
-
-                        <a class="nav-link" href="config.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-cogs" style="color:#FFFFFF;"></i></div>
-                            Sobre Nosotros
-                        </a>
-
-                    </div>
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <a class="nav-link" href="cuotas.php">
+                        <div class="sb-nav-link-icon"><i class="fa fa-credit-card" aria-hidden="true"></i></div>
+                        Cobrar Pago
+                    </a>
+                    <a class="nav-link" href="inscripcion.php">
+                        <div class="sb-nav-link-icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+                        Inscribir
+                    </a>
+                    <a class="nav-link" href="usuarios.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                        Usuarios
+                    </a>
+                    <a class="nav-link" href="estadisticas.php">
+                        <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true"></i></div>
+                        Gestión de Estudiantes
+                    </a>
+                    <a class="nav-link" href="historial_alumno.php">
+                        <div class="sb-nav-link-icon"><i class="fa fa-industry" aria-hidden="true"></i></div>
+                        Estudiantes
+                    </a>
+                    <a class="nav-link" href="gastos.php">
+                        <div class="sb-nav-link-icon"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                        Control de Gastos
+                    </a>
+                    <a class="nav-link" href="config.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-cogs"></i></div>
+                        Sobre Nosotros
+                    </a>
                 </div>
-            </nav>
-        </div>
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid mt-2">
+
+                <!-- Imagen (logo u otro) al final -->
+                <div class="sidebar-footer">
+                    <img src="assets/academia1.png" alt="Logo">
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid mt-2">

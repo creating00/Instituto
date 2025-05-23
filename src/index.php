@@ -150,131 +150,40 @@ $rolesHandler->inicializarRoles();
         </div>
     </a>
 </div>
+<div class="row justify-content-center">
+    <?php
+    $items = [
+        ["link" => "alumno.php", "color" => "#198754", "icon" => "fa-graduation-cap", "label" => "Estudiantes", "value" => $totalA],
+        ["link" => "curso.php", "color" => "#0d6efd", "icon" => "fa-tasks", "label" => "Cursos", "value" => $totalC],
+        ["link" => "profesor.php", "color" => "#dc3545", "icon" => "fa-users", "label" => "Profesores", "value" => $totalP],
+        ["link" => "sala.php", "color" => "#0d6efd", "icon" => "fa-window-restore", "label" => "Salas", "value" => $totalSa],
+        ["link" => "ganancias.php", "color" => "#0d6efd", "icon" => "fa-dollar-sign", "label" => "Ganancias", "value" => "$ $ $ $ $"],
+        ["link" => "uniformes.php", "color" => "#1E3A8A", "icon" => "fa-tshirt", "label" => "Uniformes", "value" => ""]
+    ];
 
-
-    <!-- Earnings (Monthly) Card Example -->
-    <a class="col-xl-3 col-md-6 mb-4" href="alumno.php">
-        <div class="card border-left-success shadow h-100 py-2 bg-success">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Estudiantes</div>
-                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalA; ?></div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-graduation-cap fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>
-                    </div>
-                </div>
+    foreach ($items as $item): ?>
+        <a href="<?= $item['link']; ?>" class="text-decoration-none text-center m-3">
+            <div style="
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                background-color: <?= $item['color']; ?>;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+                transition: transform 0.2s;
+            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fa <?= $item['icon']; ?> fa-2x mb-2"></i>
+                <strong class="text-uppercase"><?= $item['label']; ?></strong>
+                <div class="h5"><?= $item['value']; ?></div>
             </div>
-        </div>
-    </a>
-
-    <!-- Earnings (Monthly) Card Example -->
-    <a class="col-xl-3 col-md-6 mb-4" href="curso.php">
-        <div class="card border-left-info shadow h-100 py-2 bg-primary">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Cursos</div>
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-auto">
-                                <div class="h5 mb-0 mr-3 font-weight-bold text-white"><?php echo $totalC; ?></div>
-                            </div>
-                            <!--<div class="col">
-                                    <div class="progress progress-sm mr-2">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>-->
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-tasks fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <!-- Pending Requests Card Example -->
-    <a class="col-xl-3 col-md-6 mb-4" href="profesor.php">
-        <div class="card border-left-warning bg-danger shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Profesores</div>
-                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalP; ?></div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-users fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-    <a class="col-xl-3 col-md-6 mb-4" href="sala.php">
-        <div class="card border-left-info shadow h-100 py-2 bg-primary">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Salas</div>
-                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalSa; ?></div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-window-restore fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-    <a class="col-xl-3 col-md-6 mb-4" href="ganancias.php">
-        <div class="card border-left-info shadow h-100 py-2 bg-primary">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-
-                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Ganancias</div>
-                        <div class="h5 mb-0 font-weight-bold text-white" style="color:#FFFFFF;">$ $ $ $ $</div>
-                    </div>
-                    <div class="col-auto">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <a class="col-xl-3 col-md-6 mb-4" href="uniformes.php">
-        <div class="card border-left-warning shadow h-100 py-2" style="background-color: #1E3A8A;">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Uniformes</div>
-
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-tshirt fa-2x text-white"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <a class="col-xl-3 col-md-6 mb-4" href="sedes.php" hidden>
-        <div class="card border-left-primary shadow h-100 py-2 bg-warning">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Sedes</div>
-                        <div class="h5 mb-0 font-weight-bold text-white"><?php echo $totalSe; ?></div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-university fa-5x" aria-hidden="true" style="color:#FFFFFF;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
+        </a>
+    <?php endforeach; ?>
 </div>
+
 <script>
     DameLaFechaHora();
 </script><?php echo date("Y"); ?>

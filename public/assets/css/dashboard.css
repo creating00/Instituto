@@ -1,0 +1,65 @@
+/* Navbar personalizado */
+.sb-topnav.navbar-dark.bg-dark {
+    background-color: #303745 !important;
+    border-bottom: 1px solid #5a5f6b; 
+}
+
+.sb-topnav .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.sb-topnav .navbar-brand img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.sb-topnav.navbar-dark .nav-link,
+.sb-topnav.navbar-dark .btn-link {
+    color: #fff !important;
+}
+
+.sb-topnav.navbar-dark .btn-link:hover,
+.sb-topnav.navbar-dark .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Dropdown */
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: #222222;
+    background-color: #f8f9fa;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #e2e6ea;
+    color: #000;
+}
+
+.sb-topnav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Sidebar menú gris suave */
+.sb-sidenav-menu {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+.sb-sidenav-menu .nav-link {
+    color: #555555 !important;
+}
+
+.sb-sidenav-menu .nav-link:hover {
+    background-color: #e0e0e0 !important;
+    color: #000000 !important;
+}
+
+/* Color de los íconos */
+.sb-sidenav-menu .nav-link .sb-nav-link-icon {
+    color: #777777 !important;
+}

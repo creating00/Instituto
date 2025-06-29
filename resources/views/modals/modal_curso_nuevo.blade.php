@@ -1,7 +1,7 @@
 <div id="nuevo_curso" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-modal-header text-white">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="my-modal-title">Registrar Nuevo Curso</h5>
                 <button class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

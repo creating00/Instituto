@@ -3,11 +3,11 @@
 @section('title', 'Gestión de Alumnos')
 
 @section('content')
-    <div class="container-fluid d-flex justify-content-between align-items-center mb-3">
-        <button class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="#nuevo_alumno">
+    <div class="container-fluid">
+        <button class="btn btn-primary btn-sm float-right" type="button" data-toggle="modal" data-target="#nuevo_alumno">
             <i class="fas fa-plus"></i> Nuevo Alumno
         </button>
-        <button class="btn btn-danger btn-sm" type="button" data-toggle="modal" data-target="#bajas" hidden>
+        <button class="btn btn-danger btn-sm float-right" type="button" data-toggle="modal" data-target="#bajas" hidden>
             <i class="fas fa-minus"></i> Alumnos Dados de Baja
         </button>
     </div>
@@ -71,9 +71,6 @@
                         </td>
                     </tr>
                 @empty
-                    <tr>
-                        <td colspan="11" class="text-center">No hay alumnos registrados.</td>
-                    </tr>
                 @endforelse
             </tbody>
         </table>
@@ -90,21 +87,10 @@
 
 @push('scripts')
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const table = document.querySelector('#alumnosTable');
-            const filas = table.querySelectorAll('tbody tr');
-
-            if (filas.length === 1 && filas[0].querySelectorAll('td').length === 1) {
-                return;
-            } else {
-                console.log("Hola")
-            }
-
-            initDataTable('#alumnosTable', {
-                order: [
-                    [1, 'asc']
-                ]
-            });
+        initDataTable('#alumnosTable', {
+            order: [
+                [1, 'asc']
+            ]
         });
     </script>
 @endpush

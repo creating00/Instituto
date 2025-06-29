@@ -12,38 +12,60 @@
                     'color' => '#f94144',
                     'icon' => 'fa-user',
                     'label' => 'Usuarios',
-                    'value' => $totalU,
+                    'value' => '',
                 ],
                 [
                     'link' => 'alumnos',
                     'color' => '#f3722c',
                     'icon' => 'fa-graduation-cap',
                     'label' => 'Estudiantes',
-                    'value' => $totalA,
+                    'value' => '',
                 ],
                 [
                     'link' => 'cursos',
                     'color' => '#f9c74f',
                     'icon' => 'fa-tasks',
                     'label' => 'Cursos',
-                    'value' => $totalC,
+                    'value' => '',
                 ],
                 [
-                    'link' => 'profesor',
+                    'link' => 'profesores',
                     'color' => '#90be6d',
                     'icon' => 'fa-users',
                     'label' => 'Profesores',
-                    'value' => $totalP,
+                    'value' => '',
                 ],
                 [
-                    'link' => 'sala',
+                    'link' => 'salas',
                     'color' => '#43aa8b',
                     'icon' => 'fa-window-restore',
                     'label' => 'Salas',
-                    'value' => $totalSa,
+                    'value' => '',
+                ],
+                [
+                    'link' => 'ganancias',
+                    'color' => '#577590',
+                    'icon' => 'fa-dollar-sign',
+                    'label' => 'Ganancias',
+                    'value' => '$ $ $ $ $',
+                ],
+                // [
+                //     'link' => 'uniformes',
+                //     'color' => '#277da1',
+                //     'icon' => 'fa-tshirt',
+                //     'label' => 'Uniformes',
+                //     'value' => '',
+                // ],
+                [
+                    'link' => 'sedes',
+                    'color' => '#8e44ad',
+                    'icon' => 'fa-building',
+                    'label' => 'Sedes',
+                    'value' => '',
                 ],
             ];
         @endphp
+
 
         @foreach ($items as $item)
             <a href="{{ url($item['link']) }}" class="text-decoration-none text-center m-3">

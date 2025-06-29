@@ -9,7 +9,7 @@ class CreateUsuarioTable extends Migration
     public function up()
     {
         Schema::create('usuario', function (Blueprint $table) {
-            $table->increments('idusuario');
+            $table->id();
             $table->string('nombre', 100);
             $table->string('correo', 100)->unique();
             $table->string('usuario', 20)->unique();

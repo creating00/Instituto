@@ -6511,13 +6511,18 @@ a.close.disabled {
 
 .bg-primary {
     /* gris muy claro, similar a Bootstrap light */
+    /* background-color: #303745 !important; */
+    background-color: #223347 !important;
+}
+
+.bg-primary-login {
+    /* gris muy claro, similar a Bootstrap light */
     background-color: #f8f9fa !important;
 }
 
-.bg-modal-header {
-    /* gris muy claro, similar a Bootstrap light */
+/* .bg-primary {
     background-color: #303745 !important;
-}
+} */
 
 a.bg-primary:hover,
 a.bg-primary:focus,
@@ -10588,7 +10593,8 @@ body {
     z-index: 1039;
 }
 .sb-topnav .navbar-brand {
-    width: 225px;
+    /* width: 225px; */
+    width: auto;
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0;

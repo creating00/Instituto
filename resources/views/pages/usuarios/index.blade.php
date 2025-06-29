@@ -1,4 +1,4 @@
-@extends('layouts.app') {{-- O tu layout base --}}
+@extends('layouts.app')
 
 @section('title', 'Gestión de Usuarios')
 
@@ -16,7 +16,7 @@
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Usuario</th>
-                    <th hidden>Sede</th>
+                    {{-- <th hidden>Sede</th> --}}
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
@@ -27,7 +27,7 @@
                         <td>{{ $usuario->nombre }}</td>
                         <td>{{ $usuario->correo }}</td>
                         <td>{{ $usuario->usuario }}</td>
-                        <td hidden>{{-- $usuario->sede->nombre ?? '' --}}</td>
+                        {{-- <td hidden>{{ $usuario->sede->nombre ?? '' }}</td> --}}
                         <td>
                             @if ($usuario->estado)
                                 <span class="badge badge-pill badge-success">Activo</span>
@@ -37,18 +37,18 @@
                         </td>
                         <td>
                             @if ($usuario->estado)
-                                <a href="{{ route('usuarios.edit', $usuario->idusuario) }}" class="btn btn-success">
+                                <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-success">
                                     <i class="fas fa-edit"></i>
                                 </a>
 
-                                <form action="{{ route('usuarios.destroy', $usuario->idusuario) }}" method="POST"
+                                <form action="{{ route('usuarios.destroy', $usuario->id) }}" method="POST"
                                     class="d-inline confirmar">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger" type="submit"><i class="fas fa-trash-alt"></i></button>
                                 </form>
                             @else
-                                <a href="{{ route('usuarios.activate', $usuario->idusuario) }}" class="btn btn-warning">
+                                <a href="{{ route('usuarios.activate', $usuario->id) }}" class="btn btn-warning">
                                     <i class="fa fa-user-plus" aria-hidden="true"></i>
                                 </a>
                             @endif
@@ -57,7 +57,7 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $usuarios->links() }} {{-- Paginación --}}
+        {{ $usuarios->links() }}
     </div>
 @endsection
 
@@ -70,7 +70,7 @@
         initDataTable('#userTable', {
             order: [
                 [0, 'asc']
-            ] // Columna 0 = "Nombre", ascendente
+            ]
         });
     </script>
 @endpush

@@ -12,7 +12,6 @@ class Usuario extends Authenticatable
     use HasApiTokens, Notifiable;
 
     protected $table = 'usuario';
-    protected $primaryKey = 'idusuario';
 
     protected $fillable = [
         'nombre',
@@ -36,5 +35,10 @@ class Usuario extends Authenticatable
     public function getNameAttribute()
     {
         return $this->usuario;
+    }
+
+    public function sede()
+    {
+        return $this->belongsTo(Sede::class, 'idsede');
     }
 }

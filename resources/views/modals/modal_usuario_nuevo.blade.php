@@ -4,7 +4,7 @@
         <form action="{{ route('usuarios.store') }}" method="POST" autocomplete="off">
             @csrf
             <div class="modal-content">
-                <div class="modal-header bg-modal-header text-white">
+                <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title" id="nuevoUsuarioLabel">Nuevo Usuario</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
                         <span aria-hidden="true">&times;</span>

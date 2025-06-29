@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\AlumnoHistorialController;
+
 
 Route::middleware('auth')->group(function () {
 
@@ -23,4 +25,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/alumnos', function () {
         return "Guardar nuevo alumno - En desarrollo";
     })->name('alumnos.store');
+
+    Route::get('/historial-alumno', [AlumnoHistorialController::class, 'index'])->name('alumnos.historial');
 });

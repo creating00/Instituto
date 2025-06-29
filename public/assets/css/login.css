@@ -1,0 +1,120 @@
+/* Custom styles for a modern login form */
+.modern-login-card {
+    border-radius: 15px;
+    /* Softer corners for the card */
+    border: none;
+    /* Remove default card border */
+    overflow: hidden;
+    /* Ensures content respects border-radius */
+}
+
+.modern-card-header {
+    background-color: #f8f9fa;
+    /* Light background for header */
+    border-bottom: 1px solid #e0e0e0;
+    /* Subtle border at the bottom */
+    padding: 30px 20px;
+    /* More padding for a spacious feel */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.modern-logo {
+    border-radius: 10px;
+    /* Slightly rounded logo */
+    border: none;
+    /* Remove img-thumbnail border */
+}
+
+.modern-heading {
+    font-weight: 600;
+    /* Bolder heading */
+    color: #343a40;
+    /* Darker text color */
+    margin-top: 15px;
+}
+
+.modern-label {
+    font-weight: 500;
+    /* Slightly bolder labels */
+    color: #495057;
+    /* Slightly darker label color */
+}
+
+.modern-input {
+    border: 1px solid #ced4da;
+    /* Default border */
+    border-radius: 8px;
+    /* Rounded input fields */
+    padding: 10px 15px;
+    /* More padding */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    /* Subtle inner shadow */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transitions */
+}
+
+.modern-input:focus {
+    border-color: #80bdff;
+    /* Bootstrap's primary color for focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    /* Focus glow */
+    outline: none;
+    /* Remove default outline */
+}
+
+.modern-button {
+    background-color: #007bff;
+    /* Bootstrap primary blue */
+    border-color: #007bff;
+    /* Matching border color */
+    border-radius: 8px;
+    /* Rounded button */
+    padding: 10px 20px;
+    /* Adequate padding */
+    font-weight: 600;
+    /* Bolder text on button */
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.modern-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    border-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    /* Subtle shadow on hover */
+}
+
+.modern-button:active {
+    background-color: #004085 !important;
+    /* Even darker on active */
+    border-color: #004085 !important;
+}
+
+/* Adjustments for the alert messages */
+.alert-danger {
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Ensure the footer maintains its intended style if custom-footer is defined */
+.custom-footer {
+    /* If you have specific styles for custom-footer, keep them here */
+    color: #6c757d !important;
+    /* Ensure muted text color */
+    font-size: 0.85rem !important;
+    /* Smaller font size */
+}
+
+.custom-footer a {
+    color: #007bff;
+    /* Link color in footer */
+    text-decoration: none;
+    /* No underline by default */
+}
+
+.custom-footer a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}

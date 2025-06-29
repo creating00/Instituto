@@ -14,9 +14,8 @@ class AlumnoController extends Controller
     {
         try {
             $alumnos = Alumno::paginate(10);
+            $alumnosInactivos = Alumno::where('estado', 0)->get();
         } catch (QueryException $e) {
-            // $alumnosInactivos = Alumno::where('estado', 'Inactivo')->get();
-            $alumnosInactivos = collect(); // colección vacía
             $alumnos = new LengthAwarePaginator(
                 [],      // items
                 0,       // total
@@ -24,6 +23,7 @@ class AlumnoController extends Controller
                 Paginator::resolveCurrentPage(), // página actual
                 ['path' => Paginator::resolveCurrentPath()]
             );
+            $alumnosInactivos = collect();
         }
 
         return view('pages.alumnos.index', compact('alumnos', 'alumnosInactivos'));

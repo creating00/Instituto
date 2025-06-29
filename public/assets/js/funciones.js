@@ -1,18 +1,3 @@
-window.initDataTable = function (selector, options = {}) {
-    const defaultOptions = {
-        language: {
-            url: "/assets/lang/es/es.json",
-        },
-        paging: true,
-        searching: true,
-        ordering: true,
-    };
-
-    const finalOptions = Object.assign({}, defaultOptions, options);
-
-    return $(selector).DataTable(finalOptions);
-};
-
 document.addEventListener("DOMContentLoaded", function () {
     $(".confirmar").submit(function (e) {
         e.preventDefault();

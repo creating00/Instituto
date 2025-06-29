@@ -56,4 +56,13 @@ class CursoController extends Controller
     {
         //
     }
+
+    public function lista()
+    {
+        $cursos = Curso::with('sede')
+            ->where('estado', 1)
+            ->get();
+
+        return response()->json($cursos);
+    }
 }

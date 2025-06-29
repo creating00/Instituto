@@ -2,7 +2,7 @@
 <div id="nuevo_pass" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-modal-header text-white">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title">Cambiar contraseña</h5>
                 <button class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

@@ -1,26 +1,65 @@
-/* Navbar personalizado */
+/* === Variables Globales === */
+:root {
+    --navbar-bg: #223347;
+    --navbar-border: #5a5f6b;
+    --sidebar-bg: #f5f5f5;
+    --sidebar-hover: #e0e0e0;
+    --text-light: #fff;
+    --logo-color: white;
+    --logo-hover: #f1f1f1;
+}
+
+.bg-primary {
+    background-color: var(--navbar-bg) !important;
+}
+
+/* === Navbar === */
 .sb-topnav.navbar-dark.bg-dark {
-    background-color: #303745 !important;
-    border-bottom: 1px solid #5a5f6b; 
+    /* height: auto; */
+    padding: 0.5rem 1rem;
+    background-color: var(--navbar-bg) !important;
 }
 
 .sb-topnav .navbar-brand {
+    position: relative;
+    z-index: 1051;
+    padding-left: 0.5rem;
     display: flex;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     font-size: 1.25rem;
-    color: #fff;
+    color: var(--text-light);
+    height: 100%;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: 25 !important;
 }
 
-.sb-topnav .navbar-brand img {
-    height: 30px;
-    margin-right: 10px;
+/* Responsivo */
+@media (max-width: 576px) {
+    .sb-topnav .navbar-brand {
+        padding-left: 0.25rem;
+    }
+
+    .sb-topnav.navbar-dark.bg-dark {
+        height: 60px;
+    }
+    #logo-svg {
+        height: 32px;
+    }
+
+    .navbar-brand span {
+        display: none;
+    }
+
+    #sidebarToggle {
+        margin-left: 0.5rem;
+    }
 }
 
+/* Estilos de enlaces y botones */
 .sb-topnav.navbar-dark .nav-link,
 .sb-topnav.navbar-dark .btn-link {
-    color: #fff !important;
+    color: var(--text-light) !important;
 }
 
 .sb-topnav.navbar-dark .btn-link:hover,
@@ -28,9 +67,9 @@
     color: rgba(255, 255, 255, 0.75) !important;
 }
 
-/* Dropdown */
+/* Dropdown menu */
 .navbar-nav .dropdown-menu .dropdown-item {
-    color: #222222;
+    color: #222;
     background-color: #f8f9fa;
 }
 
@@ -39,27 +78,115 @@
     color: #000;
 }
 
-.sb-topnav {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-/* Sidebar menú gris suave */
+/* === Sidebar === */
 .sb-sidenav-menu {
-    background-color: #f5f5f5;
-    color: #333333;
+    background-color: var(--sidebar-bg);
+    color: #333;
 }
 
 .sb-sidenav-menu .nav-link {
-    color: #555555 !important;
+    color: #555 !important;
 }
 
 .sb-sidenav-menu .nav-link:hover {
-    background-color: #e0e0e0 !important;
-    color: #000000 !important;
+    background-color: var(--sidebar-hover) !important;
+    color: #000 !important;
 }
 
-/* Color de los íconos */
 .sb-sidenav-menu .nav-link .sb-nav-link-icon {
-    color: #777777 !important;
+    color: #777 !important;
+}
+
+#layoutSidenav_nav {
+    padding-top: 55px;
+    min-height: calc(100vh - 70px);
+    box-sizing: border-box;
+}
+
+/* === Logo SVG === */
+#logo-svg {
+    height: 3rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--logo-color);
+    transition: color 0.3s ease;
+}
+
+#logo-svg svg {
+    height: 100%;
+    width: auto;
+    fill: currentColor;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#logo-svg:hover {
+    color: var(--logo-hover);
+}
+
+#sidebar-menu {
+    padding-top: 0 !important;
+    transition: padding-top 0.3s ease;
+}
+
+
+#layout {
+  display: grid;
+  grid-template-areas:
+    "sidebar navbar"
+    "sidebar main"
+    "sidebar footer";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 60px 1fr auto;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Áreas del layout */
+#sidebar {
+  grid-area: sidebar;
+  background-color: var(--sidebar-bg);
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+}
+
+#navbar {
+  grid-area: navbar;
+  background-color: var(--navbar-bg);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+
+#main {
+  grid-area: main;
+  overflow-y: auto;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+/* === Estilo colapsado === */
+body.sidebar-collapsed #layout {
+  grid-template-columns: 60px 1fr;
+}
+
+body.sidebar-collapsed #sidebar .nav-link span,
+body.sidebar-collapsed .sidebar-header span {
+  display: none;
+}
+
+body.sidebar-collapsed #sidebar {
+  width: 60px;
+}
+
+.sb-nav-link-icon {
+  width: 30px;
+  text-align: center;
+  color: #555;
 }

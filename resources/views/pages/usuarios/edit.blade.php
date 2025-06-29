@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card">
-                <div class="card-header bg-modal-header text-white">
+                <div class="card-header bg-primary text-white">
                     Modificar Usuario
                 </div>
                 <div class="card-body">
@@ -18,11 +18,11 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('usuarios.update', $usuario->idusuario) }}" method="POST">
+                    <form action="{{ route('usuarios.update', $usuario->id) }}" method="POST">
                         @csrf
                         @method('PUT') {{-- Para método PUT o PATCH en formulario --}}
 
-                        <input type="hidden" name="id" value="{{ $usuario->idusuario }}">
+                        <input type="hidden" name="id" value="{{ $usuario->id }}">
 
                         <div class="form-group">
                             <label for="nombre">Nombre</label>

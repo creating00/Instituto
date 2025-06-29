@@ -23,4 +23,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/cursos', function () {
         return "Guardar nuevo alumno - En desarrollo";
     })->name('cursos.store');
+
+    Route::get('/cursos/lista', [CursoController::class, 'lista']);
 });

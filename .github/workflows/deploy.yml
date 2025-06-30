@@ -1,4 +1,4 @@
-name: Deploy Laravel a Hostinger por FTP
+name: Deploy Laravel insitituto a Hostinger por FTP
 
 on:
   push:

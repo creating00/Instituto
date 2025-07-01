@@ -1,7 +1,7 @@
 <?php
     $host = "localhost";
     $user = "u383024755_creatingsr";
-    $clave = "Academia$123";
+    $clave = "System32&";
     $bd = "u383024755_instituto";
     $conexion = mysqli_connect($host,$user,$clave,$bd);
     if (mysqli_connect_errno()){
